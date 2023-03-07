@@ -37,7 +37,20 @@ const vec3 boxsize=vec3(0,0,0);
 const float walleps=1e-2;
 
 #define T time
+#define S smoothstep
+#define mouse (touch/resolution)
+#define rot(a) mat2(cos(a),-sin(a),sin(a),cos(a))
 
+float tick(float t,float e) {
+    return floor(t)+pow(S(.0,1.,S(.0,1.,fract(t))),e);
+}
+
+float box(vec3 p,vec3 s,float r) {
+    p=abs(p)-s;
+
+    return length(max(p,.0))+
+        min(.0,max(max(p.x,p.y),p.z))-r;
+}
 
 
 
