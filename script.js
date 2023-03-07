@@ -410,6 +410,24 @@ function setup() {
         console.error(gl.getProgramInfoLog(program))
     }
 
+    vertices = [-1.0, -1.0, 1.0, -1.0, -1.0, 1.0, -1.0, 1.0, 1.0, -1.0, 1.0, 1.0]
+   
+    buffer = gl.createBuffer()
+
+    gl.bindBuffer(gl.ARRAY_BUFFER, buffer)
+    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STATIC_DRAW)
+
+    const position = gl.getAttribLocation(program, "position")
+
+    gl.enableVertexAttribArray(position)
+    gl.vertexAttribPointer(position, 2, gl.FLOAT, false, 0, 0)
+
+    time = gl.getUniformLocation(program, "time")
+    touch = gl.getUniformLocation(program, "touch")
+    pointerCount = gl.getUniformLocation(program, "pointerCount")
+    resolution = gl.getUniformLocation(program, "resolution")
+}
+
 
 
 
