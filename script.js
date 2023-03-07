@@ -439,6 +439,17 @@ function draw(now) {
     gl.drawArrays(gl.TRIANGLES, 0, vertices.length * 0.5)
 }
 
+function getTouches() {
+    if (!touches.size) {
+        return [0, 0]
+    }
+
+    for (let [id, t] of touches) {
+        const result = [dpr * t.clientX, dpr * (innerHeight - t.clientY)]
+
+        return result
+    }
+}
 
 
 
