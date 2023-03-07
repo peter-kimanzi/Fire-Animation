@@ -375,6 +375,14 @@ let pointerCount
 let vertices = []
 let touching = false
 
+function resize() {
+    const { innerWidth: width, innerHeight: height } = window
+
+    canvas.width = width * dpr
+    canvas.height = height * dpr
+
+    gl.viewport(0, 0, width * dpr, height * dpr)
+}
 
 
 
