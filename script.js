@@ -428,6 +428,16 @@ function setup() {
     resolution = gl.getUniformLocation(program, "resolution")
 }
 
+function draw(now) {
+    gl.clearColor(0, 0, 0, 1)
+    gl.clear(gl.COLOR_BUFFER_BIT)
+    gl.useProgram(program)
+    gl.bindBuffer(gl.ARRAY_BUFFER, null)
+    gl.bindBuffer(gl.ARRAY_BUFFER, buffer)
+    gl.uniform1f(time, now * 0.0004)
+    gl.uniform2f(resolution, canvas.width, canvas.height)
+    gl.drawArrays(gl.TRIANGLES, 0, vertices.length * 0.5)
+}
 
 
 
