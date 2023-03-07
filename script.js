@@ -52,6 +52,20 @@ float box(vec3 p,vec3 s,float r) {
         min(.0,max(max(p.x,p.y),p.z))-r;
 }
 
+float mat=.0;
+float map(vec3 p) {
+    float d=1e5,
+    room=-box(p,roomsize,.05),
+    bx=box(p-vec3(0,-(roomsize.y-(boxsize.y+.05)),0),boxsize,.05);
+
+    d=min(d, room);
+    d=min(d, bx);
+
+    if (d==bx) mat=1.;
+    else mat=.0;
+
+    return d;
+}
 
 
 
