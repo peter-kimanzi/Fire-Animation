@@ -402,6 +402,13 @@ function setup() {
     compile(vs, vertexSource)
     compile(fs, fragmentSource)
 
+    gl.attachShader(program, vs)
+    gl.attachShader(program, fs)
+    gl.linkProgram(program)
+
+    if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
+        console.error(gl.getProgramInfoLog(program))
+    }
 
 
 
