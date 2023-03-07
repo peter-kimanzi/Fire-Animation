@@ -451,6 +451,15 @@ function getTouches() {
     }
 }
 
+function loop(now) {
+    draw(now)
+    requestAnimationFrame(loop)
+}
 
+function init() {
+    setup()
+    resize()
+    loop(0)
+}
 
 
