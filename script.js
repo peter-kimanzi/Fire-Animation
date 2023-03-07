@@ -163,7 +163,15 @@ vec3 water4(vec2 uv) {
     return col;
 }
 
-ve
+vec3 water6(vec2 uv) {
+    vec2
+    n=vec2(0),
+    q=vec2(0);
+
+    uv*=.875;
+
+    b=sin(T*.4-d*4.)*.9,
+
 
 
 
