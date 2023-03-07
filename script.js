@@ -336,6 +336,21 @@ void main(void) {
                 
                 break;
             } else {
+                vec3 h=normalize(l-rd);
+                col+=e*fog*diff*(
+                1.88*pow(max(.0, dot(n, h)), 33.) +
+                .05*pow(max(.0, fres), 33.));     
+
+                side=-side;
+                vec3 rdo=refract(rd,n,1.+side*.45);
+
+                if (dot(rdo,rdo)==.0) {
+                rdo=reflect(rd,n);
+                }
+
+                rd=rdo;
+                d=9e-2;
+                e*=.925;
 
 
 
