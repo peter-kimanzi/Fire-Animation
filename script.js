@@ -154,6 +154,15 @@ vec3 water4(vec2 uv) {
         s*=1.2;
     }
 
+    vec3 col=vec3(1,3,4)*(a+a)+a+a-d;
+    col=exp(-col*8.);
+    col=abs(col);
+    col=sqrt(col);
+    col=exp(-col*4.);
+
+    return col;
+}
+
 
 
 
