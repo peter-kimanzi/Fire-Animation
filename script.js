@@ -393,6 +393,14 @@ function compile(shader, source) {
     }
 }
 
+function setup() {
+    const vs = gl.createShader(gl.VERTEX_SHADER)
+    const fs = gl.createShader(gl.FRAGMENT_SHADER)
+
+    program = gl.createProgram()
+
+    compile(vs, vertexSource)
+    compile(fs, fragmentSource)
 
 
 
