@@ -500,6 +500,16 @@ particlesJS("particles-js", {
         "sync": false
       }
     },
+    "size": {
+      "value": 2,
+      "random": true,
+      "anim": {
+        "enable": true,
+        "speed": 1,
+        "size_min": 0,
+        "sync": false
+      }
+    },
 
 
   
