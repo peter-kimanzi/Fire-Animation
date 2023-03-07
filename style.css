@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    margin: 0;
+    min-height: 100vh;
+    overflow: hidden;
+    
+   background-image:linear-gradient(black,black,black,rgb(45, 0, 0));
+    
+    touch-action: none;
+  }
+  
+  canvas {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+
+.wrapper{
+  position:absolute;
+  opacity:.8;
+  width:100%;
+  height:100%;
+  left:0%;
+  top:0%;
+   #background-image: url("https://user-images.githubusercontent.com/26748614/96337246-f14d4580-1085-11eb-8793-a86d929e034d.jpg");
+  background:transparent;
+    background-size: cover;
+    backdrop-filter:  brightness(50%);
+  
+  
+}
+.wrapper .cover {
+  position:absolute;
+  left:0%;
+  right:0%;
+  height:100%;
+  width:100%;
+  background:transparent;
+  
+  
+}
+
+.wrapper .reflection {
+  position:absolute;
+  left:50%;
+  top:110vh;
+  height:.1%;
+  width:.1%;
+  background:transparent;
+  border-radius:50%;
+  opacity:1;
+  box-shadow: 0px 0px 400px 100px orange ;
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-animation: rotate infinite;
+  animation-duration:500s;
+  animation-delay:0s;
+}
+
+@keyframes rotate {
+  
+  50% {transform:rotateZ(10deg);}
+  
+  
+ 
+  
+}
