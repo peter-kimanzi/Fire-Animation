@@ -87,7 +87,16 @@ vec3 water2(vec2 uv) {
         q=uv*s-t+b+i+n;
         a+=dot(sin(q)/s,vec2(.2));
         n-=sin(q);
+        s*=1.2;
+    }
 
+    vec3 col=vec3(1,3,4)*(a+a)+a+a-d;
+    col=exp(-col*8.);
+    col=abs(col);
+    col=sqrt(col);
+    col=exp(-col*4.);
+
+    return col;
 
 
 
