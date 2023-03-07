@@ -316,6 +316,20 @@ void main(void) {
             fog=1.-clamp(dd/maxd,.0,1.),
             fres=max(.0,dot(-rd,n));
 
+            if (mat==.0) {
+                if (p.x>(roomsize.x-walleps)) {
+                    col+=mix(diff*water3(p.zy*.125)*2.,vec3(fres),fog)*e;
+                } else if (p.x<-(roomsize.x-walleps)) {
+                    col+=mix(diff*water6(p.zy*.25)*2.,vec3(fres),fog)*e;
+                } else if (p.z<-(roomsize.z-walleps)) {
+                    col+=mix(diff*water4(p.xy*.25)*2.5,vec3(fres),fog)*e;
+                } else if (p.z>(roomsize.z-walleps)) {
+                    col+=mix(diff*water2(p.xy*.15)*2.,vec3(fres),fog)*e;
+                } else if (p.y>(roomsize.y-walleps)) {
+                    col+=mix(diff*water(p.xz*.125)*4.,vec3(fres),fog)*e;
+                } else if (p.y<-(roomsize.y-walleps)) {
+                    col+=mix(diff*water5(p.xz*.1)*4.,vec3(fres),fog)*e;
+
 
 
 
