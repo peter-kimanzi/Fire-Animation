@@ -329,6 +329,13 @@ void main(void) {
                     col+=mix(diff*water(p.xz*.125)*4.,vec3(fres),fog)*e;
                 } else if (p.y<-(roomsize.y-walleps)) {
                     col+=mix(diff*water5(p.xz*.1)*4.,vec3(fres),fog)*e;
+                } else {
+                    // no color...
+                }
+                col-=diff*fog;
+                
+                break;
+            } else {
 
 
 
