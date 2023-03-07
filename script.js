@@ -1,3 +1,4 @@
+const canvas = window.canvas
 
 
 
