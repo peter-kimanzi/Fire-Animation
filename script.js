@@ -181,7 +181,15 @@ vec3 water6(vec2 uv) {
     uv.y-=t*.05;
 
     mat2 m=mat2(.6,1.2,-1.2,.6);
+    for (float i=.0; i<30.; i++) {
+        n*=m;
+        q=uv*s-t+b+i+n;
+        a+=dot(cos(q)/s,vec2(.2));
+        n+=sin(q);
+        s*=1.2;
+    }
 
+}
 
 
 
