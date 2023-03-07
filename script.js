@@ -262,7 +262,24 @@ vec3 water(vec2 uv) {
     return col;
 }
 
+vec3 norm(vec3 p) {
+    vec2 e=vec2(1e-3,0);
+    float d=map(p);
+    vec3 n=d-vec3(
+        map(p-e.xyy),
+        map(p-e.yxy),
+        map(p-e.yyx)
+    );
 
+    return normalize(n);
+}
+
+void cam(inout vec3 p) {
+
+        p.yz*=.7*rot(sin(3.+1.0*T*.1)*-.1);
+        p.xz*=-.8*rot(tick(3.+1.0*T*.0001, 1.)*1.57079);
+    
+}
 
 
         
