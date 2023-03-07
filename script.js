@@ -466,7 +466,14 @@ document.body.onload = init
 window.onresize = resize
 
 particlesJS("particles-js", {
-
+  "particles": {
+    "number": {
+      "value": 355,
+      "density": {
+        "enable": true,
+        "value_area": 789.1476416322727
+      }
+    },
 
 
 
