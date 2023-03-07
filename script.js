@@ -198,7 +198,10 @@ vec3 water6(vec2 uv) {
     return col;
 }
 
-
+vec3 water3(vec2 uv) {
+    vec2
+    n=vec2(0),
+    q=vec2(0);
 
 
 
