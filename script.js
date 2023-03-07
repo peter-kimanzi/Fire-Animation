@@ -238,6 +238,15 @@ vec3 water(vec2 uv) {
     uv*=.875;
 
     float
+    d=dot(uv,uv),
+    s=9.,
+    a=.02,
+    b=sin(T*4.4-d*90.)*.7,
+    t=T*4.;
+
+.2;
+    }
+
 
 
 
