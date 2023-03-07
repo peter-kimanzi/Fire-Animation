@@ -462,4 +462,6 @@ function init() {
     loop(0)
 }
 
+document.body.onload = init
+window.onresize = resize
 
