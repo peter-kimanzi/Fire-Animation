@@ -510,7 +510,13 @@ particlesJS("particles-js", {
         "sync": false
       }
     },
-
+    "line_linked": {
+      "enable": false,
+      "distance": 150,
+      "color": "#ffffff",
+      "opacity": 0,
+      "width": 0
+    },
 
   
     
