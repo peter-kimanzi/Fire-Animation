@@ -281,7 +281,14 @@ void cam(inout vec3 p) {
     
 }
 
-
+void main(void) {
+    vec2 uv = (
+        gl_FragCoord.xy-.5*resolution
+    )/min(resolution.x, resolution.y);
+    
+    float zoom=pointerCount>0
+        ? .0
+        : -exp(-cos(T))*.2;
         
 
 
