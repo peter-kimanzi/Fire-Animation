@@ -189,6 +189,13 @@ vec3 water6(vec2 uv) {
         s*=1.2;
     }
 
+    vec3 col=vec3(4,2,1)*(a+.2)+a+a-d;
+    col=exp(-col*8.);
+    col=abs(col);
+    col=sqrt(col);
+    col=exp(-col*4.);
+
+    return col;
 }
 
 
