@@ -97,6 +97,12 @@ vec3 water2(vec2 uv) {
     col=exp(-col*4.);
 
     return col;
+}
+
+vec3 water5(vec2 uv) {
+    vec2
+    n=vec2(0),
+    q=vec2(0);
 
 
 
