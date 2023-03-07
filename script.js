@@ -70,6 +70,17 @@ float map(vec3 p) {
 vec3 water2(vec2 uv) {
     vec2
     n=vec2(0),
+    q=vec2(0);
+
+    uv*=.775;
+
+    float
+    d=dot(uv,uv),
+    s=9.,
+    a=.02,
+    b=sin(T*4.4-d*90.)*.7,
+    t=T*1.;
+
 
 
 
