@@ -244,7 +244,13 @@ vec3 water(vec2 uv) {
     b=sin(T*4.4-d*90.)*.7,
     t=T*4.;
 
-.2;
+    mat2 m=mat2(.6,1.2,-1.2,.6);
+    for (float i=.0; i<30.; i++) {
+        n*=m;
+        q=uv*s-t+b+i+n;
+        a+=dot(sin(q)/s,vec2(.2));
+        n-=sin(q);
+        s*=1.2;
     }
 
 
