@@ -477,7 +477,13 @@ particlesJS("particles-js", {
     "color": {
       "value": "#ffffff"
     },
-
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+     
 
 
 
