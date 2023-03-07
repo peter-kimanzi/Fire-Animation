@@ -490,6 +490,16 @@ particlesJS("particles-js", {
         "height": 100
       }
     },
+    "opacity": {
+      "value": 0.48927153781200905,
+      "random": false,
+      "anim": {
+        "enable": true,
+        "speed": 0.9,
+        "opacity_min": 0,
+        "sync": false
+      }
+    },
 
 
   
