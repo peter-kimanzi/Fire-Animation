@@ -170,6 +170,10 @@ vec3 water6(vec2 uv) {
 
     uv*=.875;
 
+    float
+    d=dot(uv,uv),
+    s=9.,
+    a=.02,
     b=sin(T*.4-d*4.)*.9,
 
 
