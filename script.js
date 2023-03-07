@@ -384,7 +384,14 @@ function resize() {
     gl.viewport(0, 0, width * dpr, height * dpr)
 }
 
+function compile(shader, source) {
+    gl.shaderSource(shader, source)
+    gl.compileShader(shader)
 
+    if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
+        console.error(gl.getShaderInfoLog(shader))
+    }
+}
 
 
 
