@@ -304,6 +304,17 @@ void main(void) {
     const float steps=80.,maxd=20.;
     float dd=.0,side=1.,e=1.;
 
+    for (float i=.0; i<steps; i++) {
+        float d=map(p)*side;
+
+        if (d<1e-2) {
+            vec3 n=norm(p)*side;
+
+            if (dot(l,n)<.0) l=-l;
+
+            float diff=max(.0,dot(l,n)),
+            fog=1.-clamp(dd/maxd,.0,1.),
+            fres=max(.0,dot(-rd,n));
 
 
 
