@@ -222,7 +222,13 @@ vec3 water3(vec2 uv) {
     }
 
     vec3 col=vec3(1,3,4)*(a+a)+a+a-d;
+    col=exp(-col*8.);
+    col=abs(col);
+    col=sqrt(col);
+    col=exp(-col*4.);
 
+    return col;
+}
 
 
 
