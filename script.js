@@ -474,6 +474,9 @@ particlesJS("particles-js", {
         "value_area": 789.1476416322727
       }
     },
+    "color": {
+      "value": "#ffffff"
+    },
 
 
 
