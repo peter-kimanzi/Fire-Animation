@@ -27,6 +27,17 @@ precision mediump float;
 
 out vec4 waterColor;
 
+uniform vec2 resolution;
+uniform float time;
+uniform int pointerCount;
+uniform vec2 touch;
+
+const vec3 roomsize=vec3(6,5,44)*1.1;
+const vec3 boxsize=vec3(0,0,0);
+const float walleps=1e-2;
+
+#define T time
+
 
 
 
