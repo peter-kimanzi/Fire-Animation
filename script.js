@@ -351,7 +351,19 @@ void main(void) {
                 rd=rdo;
                 d=9e-2;
                 e*=.925;
+            }
+        }
 
+        if (dd>maxd) {
+            dd=maxd;
+            break;
+        }
+
+        p+=rd*d;
+        dd+=d;
+    }
+
+    waterColor = vec4(col,.1);
 
 
 
