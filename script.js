@@ -291,6 +291,18 @@ void main(void) {
         : -exp(-cos(T))*.2;
         
 
+    vec3 col=vec3(0),
+    ro=vec3(0,-roomsize.y*.5,zoom-(roomsize.x-roomsize.x*.225)),
+    rd=normalize(vec3(uv,1)),
+    l=normalize(vec3(-6,2.49,-4));
+
+    cam(ro);
+    cam(rd);
+
+    vec3 p=ro;
+
+    const float steps=80.,maxd=20.;
+    float dd=.0,side=1.,e=1.;
 
 
 
