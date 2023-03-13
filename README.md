@@ -1,6 +1,7 @@
 # Fire-Animation
 
-Cool fire Animation.
+Cool fire Animation
+
 
 ## Live site
 
