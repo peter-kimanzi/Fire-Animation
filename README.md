@@ -1,4 +1,4 @@
-# Fire-Animation.
+# Fire-Animation
 
 Cool fire Animation
 
